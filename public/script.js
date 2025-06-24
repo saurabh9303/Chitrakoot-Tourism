@@ -111,7 +111,7 @@ const places = [
     name_hi: "सबरी जलप्रपात",
     description: "These are seasonal waterfalls that flow through rocky terrains around Chitrakoot.",
     description_hi: "यह मौसमी जलप्रपात हैं जो वर्षा ऋतु में सुंदर दृश्यों के साथ बहते हैं।",
-    cover: "imageg/Shabari Waterfall/Sh Main.jpg",
+    cover: "imageg/Shabari Waterfall/Sh main.jpg",
     images: [
       "imageg/Shabari Waterfall/Sh 1.jpg",
       "imageg/Shabari Waterfall/Sh 2.jpg",
