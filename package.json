@@ -1,0 +1,24 @@
+{
+    "name": "studystudent",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js -p 3000",
+        "dev": "node server.js -p 3000"
+    },
+    "author": "Raj Gupta",
+    "license": "ISC",
+    "dependencies": {
+        "@google-cloud/translate": "^9.1.0",
+        "dotenv": "^16.5.0",
+        "ejs": "^3.1.10",
+        "express": "^4.21.2",
+        "express-ejs-layouts": "^2.5.1",
+        "mongodb": "^6.17.0",
+        "mongoose": "^6.13.8",
+        "nodemon": "^3.1.9",
+        "path": "^0.12.7"
+    }
+}

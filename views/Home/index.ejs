@@ -1,0 +1,44 @@
+<header>
+    <h1 class="title">Tourist Places in Chitrakoot</h1>
+    <select id="language-toggle">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+    </select>
+    <input type="text" id="search" placeholder="Search by name..." />
+</header>
+
+<main id="places-list" style="margin-bottom: 35px;"></main>
+
+<div class="feedback-section" style="margin-bottom: 100px;">
+    <h2>Feedback</h2>
+    <form id="feedback-form" action="/" method="post">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" cols="4" style="resize: none;"
+            placeholder="Your Message" required></textarea>
+        <button type="submit" >Send Feedback</button>
+    </form>
+    <% if(locals.msg){ %>
+        <p id="feedback-status"><%=msg%></p>
+        <script>
+            alert("<%= msg %>");
+        </script>
+    <% } %>
+</div>
+
+<div class="weather-container">
+    <h2>🌤️ Weather in Chitrakoot</h2>
+    <div class="weather-info" id="weather-data"></div>
+</div>
+
+<!-- Modal -->
+<div id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div class="modal-gallery" id="modal-gallery"></div>
+        <iframe id="modal-map" allowfullscreen loading="lazy"></iframe>
+    </div>
+</div>
+
+<script src="script.js"></script>
