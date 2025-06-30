@@ -332,7 +332,15 @@ mark {
       margin: 6px 0;
       font-size: 16px;
     }
-
+    .feedback{
+      margin-top: 10px;
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
     .error {
       color: #d8000c;
       background: #ffbaba;
