@@ -12,12 +12,12 @@
     <% feedbacks.forEach(function(feedback, index) { %>
       <div class="card mb-3 shadow-sm">
         <div class="card-header bg-primary text-white">
-          Feedback #<%= index + 1 %> - <%= feedback.name %>
+          Feedback #<%= index + 1 %> - <%= feedback.Name %>
         </div>
         <div class="card-body">
-          <p><strong>Email:</strong> <%= feedback.email %></p>
-          <p><strong>Message:</strong> <%= feedback.message %></p>
-          <p class="text-muted"><small>Submitted on <%= feedback.date %></small></p>
+          <p><strong>Email:</strong> <%= feedback.Email %></p>
+          <p><strong>Message:</strong> <%= feedback.Message %></p>
+          <p class="text-muted"><small>Submitted on <%= feedback.Feedback_DT %></small></p>
         </div>
       </div>
     <% }); %>
