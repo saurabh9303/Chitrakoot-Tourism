@@ -34,6 +34,12 @@ app.post("/", (req, res) => {
         res.render("./Home/index",{msg:"Failed to save"});
     });
 });
+app.get("/feedbacks", (req, res) => {
+    Colls_Feedback.find().then((fb)=>{
+        console.log(fb);
+        res.render("./Home/feedback",{feedbacks:fb});
+    });
+});
 app.get("/login", (req, res) => {
    res.render("./Home/login");
 });
