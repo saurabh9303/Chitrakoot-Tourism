@@ -293,4 +293,22 @@ function closeModal() {
 }
 
 // Initial render
-renderPlaces(places);
+//renderPlaces(places);
+//      <iframe src="${place.map}" width="300" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+
+const html = places.map((e, ind) => {
+  const name = currentLanguage === "hi" ? e.name_hi : e.name;
+  const description = currentLanguage === "hi" ? e.description_hi : e.description;
+  return `
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="${e.cover}" class="card-img-top h-50" alt="${name}">
+        <div class="card-body">
+          <h5 class="card-title">${name}</h5>
+          <p class="card-text">${description}</p>
+        </div>
+      </div>
+    </div>
+  `;
+}).join('');;
+document.getElementById("Chitrakoot-places-list").innerHTML = `${html}`;

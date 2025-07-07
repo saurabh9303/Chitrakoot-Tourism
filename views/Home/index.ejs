@@ -1,35 +1,42 @@
 <header>
     <h1 class="title">Tourist Places in Chitrakoot</h1>
-    <select id="language-toggle">
-        <option value="en">English</option>
-        <option value="hi">हिन्दी</option>
-    </select>
-    <a  style="text-align:end;background-color: white;" class="feedback" href="/feedbacks">Feedbacks</a>
-    <input type="text" id="search" placeholder="Search by name..." />
 </header>
 
-<main id="places-list" style="margin-bottom: 35px;"></main>
+<main class="mx-lg-5 px-lg-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" id="Chitrakoot-places-list">
 
-<div class="feedback-section" style="margin-bottom: 100px;">
-    <h2>Feedback</h2>
-    <form id="feedback-form" action="/" method="post">
-        <input type="text" name="name" id="name" placeholder="Your Name" required>
-        <input type="email" name="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" name="message" rows="5" cols="4" style="resize: none;"
-            placeholder="Your Message" required></textarea>
-        <button type="submit" >Send Feedback</button>
-    </form>
-    <% if(locals.msg){ %>
-        <p id="feedback-status"><%=msg%></p>
-        <script>
-            alert("<%= msg %>");
-        </script>
-    <% } %>
-</div>
-
-<div class="weather-container">
-    <h2>🌤️ Weather in Chitrakoot</h2>
-    <div class="weather-info" id="weather-data"></div>
+    </div>
+</main>
+<div class="row mr-0 justify-content-center py-5 bg-light rounded shadow">
+    <div class="col-lg-5 mb-4 text-white d-flex flex-column justify-content-center align-items-start rounded"
+         style="background: linear-gradient(135deg, #667eea, #764ba2);">
+        <h3 class="fw-bold mb-3">Leave your experience</h3>
+        <p class="mb-4">We'd love to hear your thoughts, suggestions, or feedback.</p>
+    </div>
+    <div class="col-lg-5">
+        <div class="feedback-section p-4 bg-white rounded shadow-sm">
+            <h2 class="mb-4 text-success">Feedback</h2>
+            <% if (locals.msg) { %>
+                <p id="feedback-status" class="text-center text-info mt-3"><%= msg %></p>
+                <script>
+                    alert("<%= msg %>");
+                </script>
+            <% } %>
+            <form id="feedback-form" action="/" method="post">
+                <div class="mb-3">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea id="message" name="message" class="form-control" rows="5" style="resize: none;"
+                        placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Send Feedback</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 <!-- Modal -->
@@ -42,4 +49,4 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+

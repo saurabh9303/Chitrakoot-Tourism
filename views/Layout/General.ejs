@@ -3,17 +3,79 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Let's Explore Chitrakoot</title>
     <link rel="stylesheet" href="style.css" />
     <script src="weather.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+        crossorigin="anonymous">
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Chitrakoot-Tour</a>
+
+        <div class="collapse navbar-collapse text-right " id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto mr-4 mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/feedbacks">Feedbacks</a>
+                </li>
+                <li class="nav-item">
+                    <select id="language-toggle" class="nav-link border-0">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group mb-2 mt-2">
+                    <input class="form-control " type="search"
+                        placeholder="Search by name..." id="search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-success"
+                            type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
     <main class="mt-5">
         <%- body %>
     </main>
-   <!--Footer Added-->
-    <footer style="position: fixed;bottom: 0;left: 0;right: 0;">
-       <p>&copy; 2025 Chitrakoot Tourism</p>
-    </footer>
+    <div class="px-5 mb-3 shadow-sm border-0 rounded-4 p-4 text-center"
+        style="background: linear-gradient(135deg, #dbeafe, #f0f9ff);">
+        <h2 class="m-4 text-primary">🌤️ Weather in Chitrakoot</h2>
+        <div id="weather-data"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<!--Footer Added-->
+<footer class="footer shadow border pt-2">
+    <p class="text-center">&copy; 2025 Chitrakoot Tourism</p>
+</footer>
+
 </html>

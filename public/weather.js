@@ -19,18 +19,18 @@
         hour: '2-digit', minute: '2-digit', hour12: true
       });
       document.getElementById("weather-data").innerHTML = `
-        <div class="weather-info">
-          <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather icon">
-          <h3>${data.name}, ${data.sys.country}</h3>
-          <p><strong>🌡️ ${data.main.temp}°C</strong> (Feels like ${data.main.feels_like}°C)</p>
-          <p>☁️ ${data.weather[0].description}</p>
-          <p>💧 Humidity: ${data.main.humidity}%</p>
-          <p>🌬️ Wind: ${data.wind.speed} m/s from ${getWindDirection(data.wind.deg)}</p>
-          <p>📈 Pressure: ${data.main.pressure} hPa</p>
-          <p>🌅 Sunrise: ${sunrise} &nbsp;&nbsp; 🌇 Sunset: ${sunset}</p>
-          <p style="margin-top: 10px; font-style: italic; color: #444;">
-            "${getWeatherComment(data.main.temp, data.main.humidity, data.weather[0].description)}"
-          </p>
+       <div>
+          <div>
+              <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather Icon" class="me-3" style="width: 80px;">
+              <h4 class="mb-0 fw-bold text-center">${data.name}, ${data.sys.country}</h4>
+              <small class="text-muted text-capitalize">${data.weather[0].description}</small>
+          </div>
+          <p class="mb-2"><strong>🌡️ ${data.main.temp}°C</strong> (Feels like ${data.main.feels_like}°C)</p>
+          <p class="mb-2">💧 <strong>Humidity:</strong> ${data.main.humidity}%</p>
+          <p class="mb-2">🌬️ <strong>Wind:</strong> ${data.wind.speed} m/s from ${getWindDirection(data.wind.deg)}</p>
+          <p class="mb-2">📈 <strong>Pressure:</strong> ${data.main.pressure} hPa</p>
+          <p class="mb-2">🌅 <strong>Sunrise:</strong> ${sunrise} &nbsp;&nbsp; 🌇 <strong>Sunset:</strong> ${sunset}</p>
+          <p class="mt-3 fst-italic text-secondary">"${getWeatherComment(data.main.temp, data.main.humidity, data.weather[0].description)}"</p>
         </div>
       `;
       // const cityName = data.name;
